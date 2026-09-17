@@ -15,7 +15,7 @@ export default function App() {
   // C47 - Lấy danh sách sinh viên
   // =========================
   useEffect(() => {
-    fetch("/api/students")
+    fetch("http://localhost:5000/api/students")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Không thể lấy danh sách sinh viên");
@@ -44,7 +44,7 @@ export default function App() {
     }
 
     try {
-      const res = await fetch("/api/students", {
+      const res = await fetch("http://localhost:5000/api/students", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -102,7 +102,7 @@ export default function App() {
 
     try {
       const res = await fetch(
-        `/api/students/${student._id}`,
+        `http://localhost:5000/api/students/${student._id}`,
         {
           method: "PUT",
           headers: {
@@ -151,7 +151,7 @@ export default function App() {
 
     try {
       const res = await fetch(
-        `/api/students/${id}`,
+        `http://localhost:5000/api/students/${id}`,
         {
           method: "DELETE",
         }
