@@ -185,7 +185,7 @@ export default function App() {
       {/* HEADER */}
       <header className="header">
         <div>
-          <h1>🎓 Quản Lý Sinh Viên</h1>
+          <h1>🎓 Quản Lý Sinh Viên - Version2</h1>
           <p>MERN Student Management</p>
         </div>
 
