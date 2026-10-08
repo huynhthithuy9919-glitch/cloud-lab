@@ -3,8 +3,14 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+
   server: {
     host: "0.0.0.0",
+
+    allowedHosts: [
+      "mern-frontend-236108.onrender.com"
+    ],
+
     proxy: {
       "/api": {
         target: "http://localhost:5000",
