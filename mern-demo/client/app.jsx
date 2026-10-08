@@ -15,7 +15,7 @@ export default function App() {
   // C47 - Lấy danh sách sinh viên
   // =========================
   useEffect(() => {
-    fetch("http://localhost:5000/api/students")
+    fetch("https://mern-backend-236108-v2.onrender.com/api/students")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Không thể lấy danh sách sinh viên");
@@ -44,7 +44,7 @@ export default function App() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/students", {
+      const res = await fetch("https://mern-backend-236108-v2.onrender.com/api/students", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -102,7 +102,7 @@ export default function App() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/students/${student._id}`,
+        `https://mern-backend-236108-v2.onrender.com/api/students/${student._id}`,
         {
           method: "PUT",
           headers: {
@@ -151,7 +151,7 @@ export default function App() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/students/${id}`,
+        `https://mern-backend-236108-v2.onrender.com/api/students/${id}`,
         {
           method: "DELETE",
         }
@@ -270,7 +270,7 @@ export default function App() {
             <br />
             <small>
               Kiểm tra Backend tại
-              http://localhost:5000
+              https://mern-backend-236108-v2.onrender.com
             </small>
           </div>
         )}
