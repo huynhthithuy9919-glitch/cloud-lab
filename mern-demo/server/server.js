@@ -28,8 +28,16 @@ mongoose.connect(process.env.MONGODB_URI)
 
 const PORT = 5000;
 
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "UP",
+    timestamp: new Date(),
+    uptime: process.uptime()
+  });
+});
+
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`MERN Backend v1.2 running on port ${PORT}`);
 });
 app.get("/api/students", async (req, res) => {
     try {
